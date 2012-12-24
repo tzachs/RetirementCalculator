@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/buttonHelpMgmCommission"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="עזרה" />
+
+    <EditText
+        android:id="@+id/editTextInitSum"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonHelpMgmCommission"
+        android:layout_margin="4dp"
+        android:hint="סכום התחלתי" />
+
+    <EditText
+        android:id="@+id/editTextMonthPay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextInitSum"
+        android:layout_margin="4dp"
+        android:hint="הפרשה חודשית " />
+
+    <EditText
+        android:id="@+id/editTextCommissionMonth"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextMonthPay"
+        android:layout_margin="4dp"
+        android:hint="דמי ניהול חודשי באחוזים" />
+
+    <EditText
+        android:id="@+id/editTextCommissionSum"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextCommissionMonth"
+        android:layout_margin="4dp"
+        android:hint="דמי ניהול צבירה באחוזים" />
+
+    <EditText
+        android:id="@+id/editTextCommissionGroath"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextCommissionSum"
+        android:layout_margin="4dp"
+        android:hint="תצואה שנתית ממוצעת באחוזים" />
+    
+    <EditText
+        android:id="@+id/editTextYearsToRetirement"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextCommissionGroath"
+        android:layout_margin="4dp"
+        android:hint=" מספר שנים לפרישה" />
+
+    <Button
+        android:id="@+id/buttonCalcMgmtCommission"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextYearsToRetirement"
+        android:layout_margin="4dp"
+        android:text="חשב" />
+
+    <TextView
+        android:id="@+id/textViewComissionTotalSum"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonCalcMgmtCommission"
+        android:text="סכום שנצבר:" />
+
+    <TextView
+        android:id="@+id/textViewComissionSum"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewComissionTotalSum"
+        android:text="דמי ניהול שנגבו:" />
+
+    <TextView
+        android:id="@+id/textViewComissionSumPercent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewComissionSum"
+        android:text="אחוז דמי ניהול מסך כספים שנצברו:" />
+
+</RelativeLayout>
