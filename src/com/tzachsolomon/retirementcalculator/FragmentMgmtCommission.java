@@ -26,9 +26,7 @@ public class FragmentMgmtCommission extends SherlockFragment implements
 	private EditText editTextCommissionMonth;
 	private EditText editTextCommissionSum;
 	private EditText editTextMonthPay;
-	private TextView textViewComissionSum;
-	private TextView textViewComissionSumPercent;
-	private TextView textViewComissionTotalSum;
+
 	private EditText editTextYearsToRetirement;
 
 	@Override
@@ -74,12 +72,6 @@ public class FragmentMgmtCommission extends SherlockFragment implements
 		editTextYearsToRetirement = (EditText) view
 				.findViewById(R.id.editTextYearsToRetirement);
 
-		textViewComissionSum = (TextView) view
-				.findViewById(R.id.textViewComissionSum);
-		textViewComissionSumPercent = (TextView) view
-				.findViewById(R.id.textViewComissionSumPercent);
-		textViewComissionTotalSum = (TextView) view
-				.findViewById(R.id.textViewComissionTotalSum);
 
 		buttonHelpMgmCommission.setOnClickListener(this);
 		buttonCalcMgmtCommission.setOnClickListener(this);
@@ -104,7 +96,10 @@ public class FragmentMgmtCommission extends SherlockFragment implements
 		//
 		FragmentManager manager = getSherlockActivity()
 				.getSupportFragmentManager();
-		FragmentMgmtCommissionHelp help = new FragmentMgmtCommissionHelp();
+		FragmentHelp help = new FragmentHelp();
+		Bundle args = new Bundle();
+		args.putInt("string_resource", R.string.help_mgmt_commission);
+		help.setArguments(args);
 		help.show(manager, "fragment_commission_help");
 	}
 
@@ -166,12 +161,24 @@ public class FragmentMgmtCommission extends SherlockFragment implements
 				Calc.commission);
 		String percentString = NumberFormat.getInstance().format(
 				Calc.commission * 100 / Calc.sumAfterCommissions);
+		
+		FragmentManager manager = getSherlockActivity()
+				.getSupportFragmentManager();
+		
+		FragmentMgmtCommissionResult result = new FragmentMgmtCommissionResult();
+		
+		Bundle args = new Bundle();
+		args.putString("sumFormat", sumFormat);
+		args.putString("commissionChargedFormat", commissionChargedFormat);
+		args.putString("percentString", percentString);
+		
+		
+		result.setArguments(args);
+		result.show(manager, "fragment_commission_help");
+		
+		
 
-		textViewComissionTotalSum.setText("סכום לפרישה " + sumFormat);
-		textViewComissionSum.setText("סך דמי ניהול שנגבו "
-				+ commissionChargedFormat);
-		textViewComissionSumPercent.setText("אחוז דמי ניהול מסך כספים שנצברו "
-				+ percentString);
+		
 
 	}
 

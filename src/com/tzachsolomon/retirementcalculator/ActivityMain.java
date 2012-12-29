@@ -47,8 +47,8 @@ public class ActivityMain extends SherlockFragmentActivity {
 
 		mTabsAdapter.addTab(actionBar.newTab().setText("חישוב דמי ניהול"),
 				FragmentMgmtCommission.class, null);
-		mTabsAdapter.addTab(actionBar.newTab().setText("קרן פנסיה או ביטוח מנהלים"),
-				FragmentCompareMenahlimVsKeren.class, null);
+		mTabsAdapter.addTab(actionBar.newTab().setText("איך לחלק?"),
+				FragmentHowDivideMenahlimKeren.class, null);
 //		mTabsAdapter.addTab(actionBar.newTab().setText("Admin"),
 //				FragmentAdmin.class, null);
 

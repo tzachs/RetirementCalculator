@@ -20,8 +20,9 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:gravity="center"
-            android:hint=" הכנס סכום הפרשה חודשית לפנסיה" />
+            
+            android:hint=" הכנס סכום הפרשה חודשית לפנסיה"
+            android:inputType="numberDecimal" />
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -34,6 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+
                 android:gravity="center"
                 android:text=" טור קרן פנסיה" />
 
@@ -49,60 +51,6 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2" >
-
-            <EditText
-                android:id="@+id/editTextPercentKeren"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:hint="הכנס אחוז הפרשה"
-                android:inputType="numberDecimal" />
-
-            <EditText
-                android:id="@+id/editTextPercentMenahilm"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:hint="הכנס אחוז הפרשה"
-                android:inputType="numberDecimal" />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="סכום הפרשה חלקי" />
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:orientation="horizontal"
-            android:weightSum="2" >
-
-            <TextView
-                android:id="@+id/textViewPercentKeren"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textViewPercentMenahilm"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="0" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
             android:layout_margin="4dp"
             android:orientation="horizontal"
             android:weightSum="2" >
@@ -112,16 +60,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:hint=" הכנס דמי ניהול חודשיים " />
+                android:hint=" הכנס דמי ניהול חודשיים "
+                android:inputType="numberDecimal" />
 
             <EditText
                 android:id="@+id/editTextMonthCommissionMenahilm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:hint=" הכנס דמי ניהול חודשיים " />
+                android:hint=" הכנס דמי ניהול חודשיים "
+                android:inputType="numberDecimal" />
         </LinearLayout>
 
         <LinearLayout
@@ -136,31 +84,50 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:hint=" הכנס דמי ניהול צבירה " />
+                android:hint=" הכנס דמי ניהול צבירה "
+                android:inputType="numberDecimal" />
 
             <EditText
                 android:id="@+id/editTextYearCommissionMenahilm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:hint=" הכנס דמי ניהול צבירה " />
+                android:hint=" הכנס דמי ניהול צבירה "
+                android:inputType="numberDecimal" />
         </LinearLayout>
 
-        <EditText
-            android:id="@+id/editTextMenahilmMekadem"
+        <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:hint="הכנס מקדם מובטח בביטוח מנהלים" />
+            android:layout_margin="4dp"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <EditText
+                android:id="@+id/editTextMekademKeren"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="הכנס מקדם משוער קרן פנסיה"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/editTextMekademMenahilm"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                
+                android:hint="הכנס מקדם מובטח בביטוח מנהלים"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
 
         <EditText
             android:id="@+id/editTextNumberOfYears"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:hint="הכנס מספר שנים לפרישה" />
+            
+            android:hint="הכנס מספר שנים לפרישה"
+            android:inputType="numberDecimal" />
 
         <Button
             android:id="@+id/buttonCalcMenahlimVsKeren"
